@@ -1,0 +1,36 @@
+﻿@implements IDisposable
+@inject IJSRuntime jsRuntime
+
+<div class="barcode-scanner">
+    <!-- Área onde o vídeo será exibido -->
+    <video id="video-target" autoplay playsinline></video>
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback<string> OnScanned { get; set; }
+
+    private DotNetObjectReference<BarcodeScanner>? objRef;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            objRef = DotNetObjectReference.Create(this); // Referência para chamada do JS para o .NET
+            await jsRuntime.InvokeVoidAsync("initBarcodeScanner", objRef); // Inicializa comunicação
+            await jsRuntime.InvokeVoidAsync("startBarcodeScanner"); // Inicia o scanner
+        }
+    }
+
+    [JSInvokable]
+    public async Task OnBarcodeDetected(string code)
+    {
+        await OnScanned.InvokeAsync(code); // Envia o código detectado com EventCallBack
+    }
+
+    public void Dispose()
+    {
+        _ = jsRuntime.InvokeVoidAsync("stopBarcodeScanner"); // Garante que o scanner pare
+        objRef?.Dispose(); // Libera a referência
+    }
+}

@@ -1,0 +1,53 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BarcodeScannerBlazor
+build_property.RootNamespace = BarcodeScannerBlazor
+build_property.ProjectDir = D:\Desenvolvimento\Projetos\Blazor\BarcodeScannerBlazor\BarcodeScannerBlazor\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Desenvolvimento\Projetos\Blazor\BarcodeScannerBlazor\BarcodeScannerBlazor
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Desenvolvimento/Projetos/Blazor/BarcodeScannerBlazor/BarcodeScannerBlazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desenvolvimento/Projetos/Blazor/BarcodeScannerBlazor/BarcodeScannerBlazor/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desenvolvimento/Projetos/Blazor/BarcodeScannerBlazor/BarcodeScannerBlazor/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desenvolvimento/Projetos/Blazor/BarcodeScannerBlazor/BarcodeScannerBlazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desenvolvimento/Projetos/Blazor/BarcodeScannerBlazor/BarcodeScannerBlazor/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bsfjgmre0o
+
+[D:/Desenvolvimento/Projetos/Blazor/BarcodeScannerBlazor/BarcodeScannerBlazor/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-qybdqi0lxo
+
+[D:/Desenvolvimento/Projetos/Blazor/BarcodeScannerBlazor/BarcodeScannerBlazor/Shared/BarcodeScanner.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJhcmNvZGVTY2FubmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-dglv1qzvtk

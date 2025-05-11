@@ -1,0 +1,49 @@
+﻿@page "/"
+@inject IJSRuntime jsRuntime
+
+<PageTitle>Início</PageTitle>
+
+<h4>Escanear Código de Barras</h4>
+
+@if (isScannerActive)
+{
+    <BarcodeScanner OnScanned="HandleBarcodeScan" />
+    <button class="btn btn-danger mt-2" @onclick="ToggleScanner">
+        <i class="bi bi-camera-video-off"></i>&nbsp; Desativar Câmera
+    </button>
+}
+else
+{
+    <button class="btn btn-primary" @onclick="ToggleScanner">
+        <i class="bi bi-camera-video-fill"></i>&nbsp; Ativar Câmera
+    </button>
+}
+
+@if (!string.IsNullOrEmpty(scannedCode))
+{
+    <p>Código escaneado: @scannedCode</p>
+}
+
+@code {
+    private bool isScannerActive = false;
+    private string scannedCode = string.Empty;
+
+    private async Task ToggleScanner()
+    {
+        if (isScannerActive)
+        {
+            await jsRuntime.InvokeVoidAsync("stopBarcodeScanner"); // Para a câmera via JS
+            isScannerActive = false;
+        }
+        else
+        {
+            isScannerActive = true;
+            // A câmera será ativada automaticamente no BarcodeScanner.razor
+        }
+    }
+
+    private void HandleBarcodeScan(string code)
+    {
+        scannedCode = code; // Armazena o código recebido do JS
+    }
+}
